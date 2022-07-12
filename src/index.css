@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card {
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  border-width: 2px;
+  opacity: 1;
+}
+
+.card:hover {
+  opacity: 0.5;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
