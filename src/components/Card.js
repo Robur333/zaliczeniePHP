@@ -2,8 +2,8 @@ import React from 'react';
 
 function Card(props) {
   let buttonBackGroundColor = props.color;
-  console.log(props);
-
+  const photo = require('./photos/' + props.color + '.jpg');
+  const isDisabled = props.clickCount > 1 ? true : false;
   const style = [
     {
       backgroundColor:
@@ -14,12 +14,14 @@ function Card(props) {
   // let buttonBackGroundColor = props.clicked === false ? 'white' : props.color;
   return (
     <button
+      disabled={isDisabled}
       id={props.id}
       onClick={props.handleClick}
       className="card"
       style={style[0]}
+      color={props.color}
     >
-      Click me
+      {props.isRevealed === false ? '?' : <img src={photo} alt="df" />}
     </button>
   );
 }
