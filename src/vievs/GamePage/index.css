@@ -8,10 +8,20 @@ body {
   background-color: rgb(255, 239, 211);
 }
 
+li {
+  list-style: none;
+}
+
 img {
   height: 120px;
   width: 120px;
   border-radius: 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
 }
 
 button {
