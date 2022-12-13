@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Cards from './components/Cards';
-import Card from './components/Card';
-import ScoreBar from './components/ScoreBar';
+import './index.css';
 
 // ========================================
 
