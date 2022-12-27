@@ -3,16 +3,23 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import Cards from './components/Cards';
 import Navbar from './components/Navbar';
-import RegisterForm from './vievs/RegisterForm/RegisterForm';
 import GamePage from './vievs/GamePage/GamePage';
+import LoginForm from './vievs/GamePage/loginForm/LoginForm';
+import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // ========================================
 
 function MemoryGame() {
   return (
-    <div>
-      <RegisterForm></RegisterForm>
-    </div>
+    <BrowserRouter>
+      <div className="container mt-2" style={{ marginTop: 40 }}>
+        <Routes>
+          <Route exact path="/" element={<LoginForm />}></Route>
+          <Route path="/Game" element={<GamePage />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
