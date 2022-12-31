@@ -1,8 +1,6 @@
-import { click } from '@testing-library/user-event/dist/click';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
 import ScoreBar from './ScoreBar';
-import logo from './photos/logo.png';
 
 let clickedHistoryColor = [];
 
@@ -159,8 +157,7 @@ const Cards = () => {
 
   return (
     <div className="center">
-      <img src={logo} alt="" />
-      <p>Kofeina Memory Game</p>
+      <p>Memory Game</p>
 
       <div className="cards">{mappedArray}</div>
 

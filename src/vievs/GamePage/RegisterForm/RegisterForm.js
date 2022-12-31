@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   return (
     <div className="form-container">
       <form
@@ -12,8 +12,15 @@ const LoginForm = () => {
         <div>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Login"
+            placeholder="Username"
             name="imie"
+          />
+        </div>
+        <div>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="email"
+            name="email"
           />
         </div>
         <div>
@@ -21,17 +28,20 @@ const LoginForm = () => {
             type="password"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Password"
-            name="email"
+            name="password"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Repeat Password"
+            name="repeated-password"
           />
         </div>
 
-        <button
-          className="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="submit"
-          name="zatwierdz"
-          value="zatwierdzenie"
-        >
-          <Link to="/Game">Log in</Link>
+        <button className="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <Link to="/">Back to Login</Link>
         </button>
         <button
           className="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -39,11 +49,11 @@ const LoginForm = () => {
           name="zatwierdz"
           value="zatwierdzenie"
         >
-          <Link to="/SignIn">Sign in</Link>
+          <Link to="/">Sign in</Link>
         </button>
       </form>
     </div>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

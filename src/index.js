@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import Cards from './components/Cards';
-import Navbar from './components/Navbar';
 import GamePage from './vievs/GamePage/GamePage';
 import LoginForm from './vievs/GamePage/loginForm/LoginForm';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import RegisterForm from './vievs/GamePage/RegisterForm/RegisterForm';
 
 // ========================================
 
@@ -15,8 +14,9 @@ function MemoryGame() {
     <BrowserRouter>
       <div className="container mt-2" style={{ marginTop: 40 }}>
         <Routes>
-          <Route exact path="/" element={<LoginForm />}></Route>
-          <Route path="/Game" element={<GamePage />}></Route>
+          <Route exact path="/" element={<LoginForm />} />
+          <Route path="/Game" element={<GamePage />} />
+          <Route path="/SignIn" element={<RegisterForm />} />
         </Routes>
       </div>
     </BrowserRouter>
