@@ -1,8 +1,10 @@
 import React from 'react';
-
+import { photos } from './photos';
 function Card(props) {
   let buttonBackGroundColor = props.color;
+  console.log(photos);
   const photo = require('./photos/' + props.color + '.jpg');
+  require('./photos/laura.jpg');
   const isDisabled = props.clickCount > 1 ? true : false;
   const style = [
     {
